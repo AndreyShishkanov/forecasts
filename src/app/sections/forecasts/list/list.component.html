@@ -1,0 +1,21 @@
+<div class="card-columns">
+    <div class="card bg-light mt-3" *ngFor="let forecast of forecasts">
+        <div class="card-header">{{forecast.name}}</div>
+        <div class="card-body">
+            <div class="d-flex">
+                <img src="http://openweathermap.org/img/w/{{forecast.weather[0].icon}}.png">
+                <h1 class="ml-2 mb-0">{{forecast.main.temp | number:'0.0-0'}}°</h1>
+                <div class="ml-2">
+                    <p class="mb-0">min {{forecast.main.temp_min | number:'0.0-0'}}°</p>
+                    <p class="mb-0">max {{forecast.main.temp_max | number:'0.0-0'}}°</p>
+                </div>
+            </div>
+            <h5 class="card-text">{{forecast.weather[0].main}}</h5>
+            <div>
+                <p>wind:&nbsp;{{forecast.wind.speed}}&nbsp;km/h</p>
+            </div>
+            <a routerLink="/{{forecast.id}}" class="btn btn-dark">Details</a>
+        </div>
+    </div>
+</div>
+

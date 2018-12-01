@@ -1,0 +1,41 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 60px;
+}
+
+main {
+  &.container{
+    padding: 60px 15px 0;
+  }
+}
+
+nav {
+  .nav-item{
+    cursor: pointer;
+  }
+}
+
+line {
+    stroke: $dark;
+    stroke-opacity: 0.25;
+    stroke-width: 0.3px;
+}
+
+.line {
+    fill: none;
+    stroke: $dark;
+    stroke-width: 3;
+}
+
+.domain {
+    fill: none;
+    stroke: $dark;
+}
+
+
+
